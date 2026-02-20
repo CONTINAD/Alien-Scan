@@ -514,6 +514,7 @@ body {
 /* Sidebar - Tactical Panel */
 .sidebar {
   width: 420px;
+  flex-shrink: 0;
   background: var(--hud-panel-bg);
   border-left: var(--panel-border);
   display: flex;
@@ -771,6 +772,7 @@ body {
 /* Right Diagnostics Panel */
 .diagnostics-panel {
   width: 350px;
+  flex-shrink: 0;
   background: var(--hud-panel-bg);
   border-right: var(--panel-border);
   display: flex;
@@ -1074,6 +1076,239 @@ body {
 
   100% {
     box-shadow: inset 0 0 0 rgba(255, 0, 60, 0);
+  }
+}
+
+/* On-Chain Feed System Log */
+.onchain-feed {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 380px;
+  background: rgba(0, 10, 0, 0.85);
+  border: 1px solid var(--neon-green);
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 255, 65, 0.1);
+  z-index: 20;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.onchain-header {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.4rem;
+  color: var(--neon-green);
+  border-bottom: 1px dashed rgba(0, 255, 65, 0.4);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 0 8px var(--neon-green-glow);
+}
+
+.onchain-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--text-muted);
+}
+
+.onchain-item {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.onchain-hash {
+  color: var(--text-primary);
+}
+
+.onchain-status {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green-glow);
+  font-weight: bold;
+}
+
+/* UFO Animations */
+.ufo-fleet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  /* Behind sidebars but above globe */
+  overflow: hidden;
+}
+
+.ufo-ship {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 65, 1) 0%, rgba(0, 50, 10, 0.8) 50%, transparent 80%);
+  box-shadow: 0 5px 25px rgba(0, 255, 65, 0.8), inset 0 10px 10px rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.6));
+  z-index: 10;
+}
+
+.ufo-dome {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+  background: radial-gradient(circle at center, rgba(0, 229, 255, 0.9) 0%, rgba(0, 100, 255, 0.5) 70%);
+  box-shadow: inset 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.ufo-beam {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0, 229, 255, 0.6) 0%, transparent 100%);
+  clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+  animation: beam-flicker 0.1s infinite alternate;
+}
+
+@keyframes beam-flicker {
+  0% {
+    opacity: 0.6;
+    height: 280px;
+  }
+
+  100% {
+    opacity: 0.9;
+    height: 320px;
+    filter: hue-rotate(20deg);
+  }
+}
+
+.ufo-1 {
+  top: 15%;
+  left: -200px;
+  animation: fly-across 45s linear infinite;
+  transform: scale(0.6) rotate(5deg);
+}
+
+.ufo-2 {
+  top: 60%;
+  right: -200px;
+  animation: fly-reverse 60s ease-in-out infinite;
+  transform: scale(0.8) rotate(-8deg);
+  filter: hue-rotate(90deg);
+  /* Make it different color */
+}
+
+.ufo-3 {
+  top: 35%;
+  left: -300px;
+  animation: fly-stealth 30s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  transform: scale(1.2);
+  filter: hue-rotate(-50deg);
+}
+
+@keyframes fly-across {
+  0% {
+    left: -200px;
+    transform: scale(0.6) rotate(5deg) translateY(0);
+  }
+
+  25% {
+    transform: scale(0.6) rotate(2deg) translateY(-50px);
+  }
+
+  50% {
+    transform: scale(0.7) rotate(-3deg) translateY(20px);
+  }
+
+  75% {
+    transform: scale(0.6) rotate(5deg) translateY(-30px);
+  }
+
+  100% {
+    left: 120%;
+    transform: scale(0.6) rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes fly-reverse {
+  0% {
+    right: -200px;
+    transform: scale(0.8) rotate(-8deg) translateY(0);
+  }
+
+  33% {
+    transform: scale(0.9) rotate(-15deg) translateY(100px);
+  }
+
+  66% {
+    transform: scale(0.8) rotate(5deg) translateY(-50px);
+  }
+
+  100% {
+    right: 120%;
+    transform: scale(0.8) rotate(-8deg) translateY(0);
+  }
+}
+
+@keyframes fly-stealth {
+  0% {
+    left: -300px;
+    opacity: 0;
+    transform: scale(1.2) translateY(0);
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  30% {
+    transform: scale(1.5) translateY(-80px);
+    opacity: 0.8;
+  }
+
+  35% {
+    opacity: 0;
+    transform: scale(2) translateY(-100px);
+  }
+
+  /* Hyperjump */
+  70% {
+    opacity: 0;
+    left: 60%;
+    transform: scale(1) translateY(100px);
+  }
+
+  /* Reappear */
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 120%;
+    opacity: 1;
+    transform: scale(1) translateY(150px);
   }
 }
 
