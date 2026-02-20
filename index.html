@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIEN SCAN | GLOBAL UAP TRACKER</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Teko:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="//unpkg.com/globe.gl"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="crt-overlay"></div>
+
+  <div class="hud-container">
+    <header class="top-nav">
+      <div class="logo">
+        <i class="fa-solid fa-radar fa-spin-pulse scan-icon"></i>
+        <h1>ALIEN SCAN</h1>
+      </div>
+      <div class="status">
+        <span class="blinking-dot"></span>
+        <span class="status-text">SYSTEM ONLINE: MONITORING GLOBAL AIRSPACE</span>
+      </div>
+      <div class="active-threats">
+        <span class="counter-label">UNIDENTIFIED CONTACTS: </span>
+        <span class="counter-value" id="threatCounter">14</span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div id="globeViz" class="globe-container"></div>
+
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2><i class="fa-solid fa-list-ul"></i> RECENT CONTACTS</h2>
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="declassified">DECLASSIFIED</button>
+            <button class="filter-btn" data-filter="civilian">CIVILIAN</button>
+          </div>
+        </div>
+        <div class="feed-container" id="sightingsFeed">
+          <!-- Feed items will be populated by app.js -->
+        </div>
+      </aside>
+    </main>
+
+    <footer class="bottom-bar">
+      <div class="coord-display" id="coordDisplay">
+        LAT: --.---- LON: --.---- | ALT: 0km
+      </div>
+      <div class="sys-info">
+        SOURCE: M.U.F.O.N / A.A.R.O DB / CIVILIAN RADAR
+      </div>
+    </footer>
+
+    <!-- Sighting Details Modal -->
+    <div id="detailsModal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">CONTACT DETAILS</h2>
+          <button id="closeModalBtn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-info-grid">
+            <div class="info-item">
+              <span class="info-label">ID / CLASS</span>
+              <span id="modalId" class="info-value">--</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">DATE / TIME</span>
+              <span id="modalDate" class="info-value">--</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">LOCATION</span>
+              <span id="modalLocation" class="info-value">--</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">COORDS</span>
+              <span id="modalCoords" class="info-value">--</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">TYPE</span>
+              <span id="modalType" class="info-value">--</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">SOURCE</span>
+              <span id="modalSource" class="info-value">--</span>
+            </div>
+            <!-- New Telemetry Items -->
+            <div class="info-item highlight-box">
+              <span class="info-label">EST. SPEED</span>
+              <span id="modalSpeed" class="info-value telemetry-text">--</span>
+            </div>
+            <div class="info-item highlight-box">
+              <span class="info-label">EST. ALTITUDE</span>
+              <span id="modalAlt" class="info-value telemetry-text">--</span>
+            </div>
+            <div class="info-item highlight-box">
+              <span class="info-label">RADAR CROSS SECTION</span>
+              <span id="modalRcs" class="info-value telemetry-text">--</span>
+            </div>
+            <div class="info-item highlight-box">
+              <span class="info-label">E.M. INTERFERENCE</span>
+              <span id="modalEmi" class="info-value telemetry-text">--</span>
+            </div>
+            <div class="info-item threat-box">
+              <span class="info-label">THREAT LEVEL</span>
+              <span id="modalThreat" class="info-value threat-text">--</span>
+            </div>
+          </div>
+          <div class="modal-desc-container">
+            <h3><i class="fa-solid fa-lock-open"></i> INCIDENT REPORT (DECRYPTED)</h3>
+            <p id="modalDesc" class="decrypt-text">--</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="flyToBtn" class="action-btn"><i class="fa-solid fa-location-crosshairs"></i> TRACK TARGET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
