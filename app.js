@@ -170,10 +170,184 @@ const SIGHTINGS_DATA = [
     desc: 'A massive black triangular craft hovered silently over a residential area, blocking out the stars. Witnesses reported a low hum and static electricity.',
     classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'HOVER', alt_ft: '500', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'STATIC FIELD' }
   },
-  {
     id: 'UAP-035', lat: -15.793, lng: -47.882, city: 'Night of the UFOs, BRA', date: '1986-05-19T20:00:00Z', type: 'orb', source: 'Brazilian Air Force',
     desc: 'Over 20 UAPs jammed radar and outmaneuvered intercepting F-5 jets across several states. Official press conference declared them intelligently controlled.',
     classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'UP TO MACH 15', alt_ft: '30,000+', rcs_sqm: 'VARIABLE', threat: 'ELEVATED', emi: 'RADAR JAMMING' }
+  },
+  {
+    id: 'UAP-036', lat: 33.577, lng: -101.855, city: 'Lubbock Lights, USA', date: '1951-08-25T21:00:00Z', type: 'triangle', source: 'Texas Tech Professors',
+    desc: 'V-shaped formations of glowing blue-green lights moving rapidly across the sky. Photographed by civilian and witnessed by severe credible sources.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'HIGH SPEED', alt_ft: 'UNKNOWN', rcs_sqm: 'N/A', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-037', lat: 36.865, lng: -87.488, city: 'Kelly-Hopkinsville, USA', date: '1955-08-21T20:00:00Z', type: 'orb', source: 'Local Police & Civilians',
+    desc: 'Family besieged by small glowing extraterrestrial entities after a metallic craft landed nearby. Gunfire had no effect, yielding metallic ping sounds.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'LANDED', alt_ft: '0', rcs_sqm: 'N/A', threat: 'ELEVATED', emi: 'LUMINESCENCE' }
+  },
+  {
+    id: 'UAP-038', lat: 30.365, lng: -88.556, city: 'Pascagoula Abduction, USA', date: '1973-10-11T21:00:00Z', type: 'tic-tac', source: 'Sheriff’s Office',
+    desc: 'Two men abducted from a pier by robotic entities from an oval-shaped craft emitting blue lights. Passed polygraph tests and secret recordings confirm trauma.',
+    classification: 'civilian', color: '#00ff41', telemetry: { speed_mach: 'HOVER', alt_ft: '0-50', rcs_sqm: 'N/A', threat: 'HIGH', emi: 'PARALYSIS BEAM' }
+  },
+  {
+    id: 'UAP-039', lat: 51.660, lng: 39.200, city: 'Voronezh Incident, RUS', date: '1989-09-27T18:30:00Z', type: 'orb', source: 'TASS / Soviet Media',
+    desc: 'A large red sphere landed in a park. Giant humanoid entities emerged accompanied by a robotic unit, firing a weapon that temporarily vanished a teenager.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0', rcs_sqm: 'LARGE', threat: 'HIGH', emi: 'WEAPONIZED LIGHT' }
+  },
+  {
+    id: 'UAP-040', lat: 36.728, lng: -108.205, city: 'Farmington Armada, USA', date: '1950-03-17T11:00:00Z', type: 'saucer', source: 'Mass Civilian Sighting',
+    desc: 'A massive armada of hundreds of flying saucers darted over the town for three consecutive days, breaking into smaller formations and accelerating instantly.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: '>1000 MPH', alt_ft: '20,000', rcs_sqm: 'MULTIPLE (SWARM)', threat: 'UNKNOWN', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-041', lat: 38.720, lng: -80.653, city: 'Flatwoods Monster, USA', date: '1952-09-12T19:15:00Z', type: 'orb', source: 'Civilian & Police',
+    desc: 'Bright pulsing object crashed in the hills. Witnesses encountered a massive, glowing, spade-headed entity emitting a noxious, sickening metallic mist.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'METEORIC', alt_ft: '0 (CRASH)', rcs_sqm: 'N/A', threat: 'ELEVATED', emi: 'CHEMICAL VENTING' }
+  },
+  {
+    id: 'UAP-042', lat: 49.704, lng: -95.321, city: 'Falcon Lake, CAN', date: '1967-05-20T12:00:00Z', type: 'saucer', source: 'RCMP & Military Investigations',
+    desc: 'Prospector burned by a grid-like exhaust from a grounded silver saucer. High radioactivity found at the landing site. Clothing melted to skin.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'HOVER', alt_ft: '0', rcs_sqm: 'N/A', threat: 'HIGH', emi: 'RADIATION, THERMAL' }
+  },
+  {
+    id: 'UAP-043', lat: 30.049, lng: -94.884, city: 'Cash-Landrum, USA', date: '1980-12-29T21:00:00Z', type: 'tic-tac', source: 'Civilian / Court Records',
+    desc: 'Diamond-shaped craft expelling intense fire/radiation, escorted by 23 dual-rotor military helicopters. Witnesses suffered severe radiation sickness.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: 'SLOW', alt_ft: '100-200', rcs_sqm: 'LARGE', threat: 'CRITICAL', emi: 'SEVERE RADIATION' }
+  },
+  {
+    id: 'UAP-044', lat: 52.895, lng: -3.376, city: 'Berwyn Mountains, WLS', date: '1974-01-23T20:30:00Z', type: 'orb', source: 'Police & MoD',
+    desc: 'Massive tremor and explosion. Witnesses saw glowing orbs on the mountain. Heavy military cordon placed. Classified as an earthquake and meteor shower.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0', rcs_sqm: 'N/A', threat: 'LOW', emi: 'SEISMIC' }
+  },
+  {
+    id: 'UAP-045', lat: 28.291, lng: -16.629, city: 'Canary Islands, ESP', date: '1976-06-22T21:27:00Z', type: 'orb', source: 'Spanish Air Force',
+    desc: 'Massive glowing sphere expanding in the sky. Corroborated by Navy ship crew who saw two tall entities inside a transparent bubble craft.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: 'HIGH', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-046', lat: 49.713, lng: -2.204, city: 'Alderney Sighting, UK', date: '2007-04-23T14:30:00Z', type: 'tic-tac', source: 'Aurigny Airlines',
+    desc: 'Pilot and passengers witnessed two enormous yellow cigar-shaped crafts off the coast of the Channel Islands. Confirmed by ATC radar.',
+    classification: 'civilian', color: '#00ff41', telemetry: { speed_mach: 'STATIONARY', alt_ft: '2,000', rcs_sqm: 'MILE-LONG', threat: 'UNKNOWN', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-047', lat: 43.769, lng: 11.256, city: 'Florence Stadium, ITA', date: '1954-10-27T14:20:00Z', type: 'orb', source: 'Mass Civilian Sighting',
+    desc: 'Football match paused as 10,000+ fans watched cigar and egg-shaped UFOs hover overhead. "Angel hair" silken material subsequently fell from the sky.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'HOVER', alt_ft: '10,000', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'MATERIAL FALLOUT' }
+  },
+  {
+    id: 'UAP-048', lat: -39.500, lng: 144.500, city: 'Bass Strait (Valentich), AUS', date: '1978-10-21T19:06:00Z', type: 'saucer', source: 'Air Traffic Control',
+    desc: 'Pilot Frederick Valentich disappeared after reporting a long, metallic craft hovering over him. Last transmission: "It is hovering, and it is not an aircraft."',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '4,500', rcs_sqm: 'UNKNOWN', threat: 'CRITICAL', emi: 'RADIO STATIC / DISAPPEARANCE' }
+  },
+  {
+    id: 'UAP-049', lat: 33.587, lng: -102.378, city: 'Levelland Wave, USA', date: '1957-11-02T22:30:00Z', type: 'orb', source: 'Police & Civilians',
+    desc: 'Egg-shaped glowing objects stalled engines and killed headlights of multiple vehicles across town. Police confirmed the phenomenon before it ascended rapidly.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'EXTREME', alt_ft: '0-200', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'SEVERE ENGINE STALLS' }
+  },
+  {
+    id: 'UAP-050', lat: 52.641, lng: -2.302, city: 'Cosford Incident, UK', date: '1993-03-31T01:15:00Z', type: 'triangle', source: 'Military Personnel (RAF)',
+    desc: 'Massive triangular craft swept over RAF bases, firing a narrow light beam to the ground. Described as moving incredibly fast with no sound.',
+    classification: 'declassified', color: '#ff003c', telemetry: { speed_mach: 'HYPERSONIC', alt_ft: '1,000', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'LIGHT BEAM' }
+  },
+  {
+    id: 'UAP-051', lat: 41.154, lng: -81.244, city: 'Portage County Chase, USA', date: '1966-04-17T05:00:00Z', type: 'saucer', source: 'Police Department',
+    desc: 'Officers pursued a metallic saucer from Ohio into Pennsylvania for 86 miles. Air Force claimed they were chasing Venus and a satellite.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'VARIABLE', alt_ft: '50-100', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'COMMUNICATION INTERFERENCE' }
+  },
+  {
+    id: 'UAP-052', lat: 32.366, lng: -86.300, city: 'Chiles-Whitted, USA', date: '1948-07-24T02:45:00Z', type: 'tic-tac', source: 'Commercial Pilots',
+    desc: 'Pilots narrowly avoided a mid-air collision with a torped-shaped craft. It featured a deep blue glow, two rows of windows, and massive exhaust flame.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: '1.0+', alt_ft: '5,000', rcs_sqm: 'COMMERCIAL AIRCRAFT SIZE', threat: 'ELEVATED', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-053', lat: 46.877, lng: -96.789, city: 'Gorman Dogfight, USA', date: '1948-10-01T21:00:00Z', type: 'orb', source: 'Air National Guard',
+    desc: 'P-51 Mustang pilot engaged in a 27-minute "dogfight" with a highly maneuverable blinding ball of light. Craft out-turned and out-climbed the fighter easily.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '600+ MPH', alt_ft: '1,000-14,000', rcs_sqm: 'SMALL', threat: 'ELEVATED', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-054', lat: 47.500, lng: -87.500, city: 'Kinross Incident, USA', date: '1953-11-23T20:00:00Z', type: 'orb', source: 'US Air Force',
+    desc: 'F-89C Scorpion intercepted an unidentified radar blip over Lake Superior. Radar operators watched the blips merge, and the jet vanished forever.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '500 MPH', alt_ft: '8,000', rcs_sqm: 'LARGE', threat: 'CRITICAL', emi: 'RADAR MERGE / DISAPPEARANCE' }
+  },
+  {
+    id: 'UAP-055', lat: 42.981, lng: -70.947, city: 'Exeter Incident, USA', date: '1965-09-03T02:00:00Z', type: 'triangle', source: 'Police & Civilians',
+    desc: 'Massive, silent object with five pulsating red lights in a line hovered over fields, frightening livestock and causing police to draw weapons.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'HOVER', alt_ft: '80', rcs_sqm: '100FT SPAN', threat: 'LOW', emi: 'ANIMAL DISTURBANCE' }
+  },
+  {
+    id: 'UAP-056', lat: 39.274, lng: -97.525, city: 'Delphos Ring, USA', date: '1971-11-02T19:00:00Z', type: 'orb', source: 'Scientific Analysis',
+    desc: 'Mushroom-shaped object hovered near the ground, leaving a glowing, highly luminescent ring in the soil that resisted water absorption for years.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'RAPID FLEE', alt_ft: '2', rcs_sqm: 'SMALL', threat: 'LOW', emi: 'CHEMICAL RING LEISURE' }
+  },
+  {
+    id: 'UAP-057', lat: 40.758, lng: -82.515, city: 'Coyne Helicopter, USA', date: '1973-10-18T23:00:00Z', type: 'tic-tac', source: 'Army Reserve Pilots',
+    desc: 'Military helicopter nearly collided with a metallic, cigar-shaped craft firing a green beam. The helicopter was mysteriously pulled upwards 2,000 feet.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: '600+ KNOTS', alt_ft: '2,500', rcs_sqm: 'LARGE', threat: 'ELEVATED', emi: 'MAGNETIC TRACTOR BEAM' }
+  },
+  {
+    id: 'UAP-058', lat: 47.505, lng: -111.183, city: 'Malmstrom AFB, USA', date: '1967-03-24T08:45:00Z', type: 'orb', source: 'USAF Personnel (Robert Salas)',
+    desc: 'Glowing red saucer hovered over a nuclear missile silo. Seconds later, ten Minuteman ICBMs completely deactivated and went totally offline simultaneously.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'HOVER', alt_ft: 'LOW', rcs_sqm: 'UNKNOWN', threat: 'HOSTILE', emi: 'SEVERE NUCLEAR TAMPERING' }
+  },
+  {
+    id: 'UAP-059', lat: 48.415, lng: -101.358, city: 'Minot AFB, USA', date: '1968-10-24T03:00:00Z', type: 'orb', source: 'US Air Force',
+    desc: 'Massive glowing object tracked on B-52 radar. Ground crews reported UFO landing near ICBM silos. B-52 radar scoped craft pacing the bomber.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'MATCHED B-52', alt_ft: '10,000', rcs_sqm: 'MASSIVE', threat: 'ELEVATED', emi: 'RADAR / COMM INTERFERENCE' }
+  },
+  {
+    id: 'UAP-060', lat: 31.800, lng: -118.800, city: 'USS Omaha, USA', date: '2019-07-15T23:00:00Z', type: 'orb', source: 'US Navy (FLIR Video)',
+    desc: 'Transmedium sphere buzzed the USS Omaha for extended period before plunging directly into the ocean without a splash. Search revealed no wreckage.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: '50-200 -> UNDERWATER', rcs_sqm: 'SMALL', threat: 'UNKNOWN', emi: 'TRANS-MEDIUM' }
+  },
+  {
+    id: 'UAP-061', lat: 32.100, lng: -118.900, city: 'USS Russell, USA', date: '2019-07-14T02:00:00Z', type: 'triangle', source: 'US Navy (Night Vision)',
+    desc: 'Pyramid/triangle-shaped objects swarmed Navy destroyers off the coast of California. Video leaked and confirmed authentic by the Pentagon.',
+    classification: 'declassified', color: '#ff003c', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '700', rcs_sqm: 'SMALL', threat: 'ELEVATED', emi: 'DRONE SWARM BEHAVIOR' }
+  },
+  {
+    id: 'UAP-062', lat: 18.636, lng: -91.825, city: 'Campeche Incident, MEX', date: '2004-03-05T17:00:00Z', type: 'orb', source: 'Mexican Air Force (FAM)',
+    desc: '11 glowing spheres tracked on military FLIR tracking drug smugglers. Invisible to the naked eye. Paced the Merlin aircraft before surrounding it.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '300 KNOTS', alt_ft: '10,500', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'IR ONLY (CLOAKED)' }
+  },
+  {
+    id: 'UAP-063', lat: 64.500, lng: -145.500, city: 'JAL Flight 1628, USA', date: '1986-11-17T17:11:00Z', type: 'saucer', source: 'Airline Pilots & FAA Radar',
+    desc: 'Cargo flight paced by two small craft and one massive, walnut-shaped object twice the size of an aircraft carrier. Tracked on military radar.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'MATCHED B747', alt_ft: '35,000', rcs_sqm: 'CARRIER-SIZED', threat: 'LOW', emi: 'RADAR CONFIRMED' }
+  },
+  {
+    id: 'UAP-064', lat: 61.500, lng: -135.500, city: 'Yukon Mothership, CAN', date: '1996-12-11T20:30:00Z', type: 'tic-tac', source: 'Mass Civilian Sighting',
+    desc: 'A mile-long craft with rows of stadium-sized lights drifted silently over the Yukon highway. Dozens of motorists parked and watched it pass over.',
+    classification: 'civilian', color: '#00ff41', telemetry: { speed_mach: '30 MPH', alt_ft: '2,000', rcs_sqm: 'MILE-LONG', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-065', lat: 61.784, lng: 34.346, city: 'Petrozavodsk Phenomenon, RUS', date: '1977-09-20T04:00:00Z', type: 'orb', source: 'Soviet Scientific Teams',
+    desc: 'Massive glowing jellyfish-like object showered the city with beams of light, burning holes through window glass. Officially dismissed as satellite launch.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'HOVER', alt_ft: 'HIGH', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'GLASS BORING RAYS' }
+  },
+  {
+    id: 'UAP-066', lat: 44.560, lng: 135.625, city: 'Height 611 Crash, RUS', date: '1986-01-29T19:55:00Z', type: 'orb', source: 'Soviet Academies of Science',
+    desc: 'Red glowing sphere crashed into a mountain. Debris consisted of ultra-pure fine metal meshes, gold, quartz, and anomalous elements defying known manufacturing.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'CRASHED', alt_ft: '0', rcs_sqm: 'SMALL', threat: 'LOW', emi: 'ANOMALOUS METALLURGY' }
+  },
+  {
+    id: 'UAP-067', lat: 34.052, lng: -118.243, city: 'Battle of Los Angeles, USA', date: '1942-02-24T02:00:00Z', type: 'saucer', source: 'US Military & Media',
+    desc: 'Artillery fired 1,400+ rounds at a massive object hovering over LA during WWII blackout. Object absorbed the fire and drifted away. Believed to be ET.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'DRIFTING', alt_ft: '10,000', rcs_sqm: 'MASSIVE', threat: 'UNKNOWN', emi: 'IMPERVIOUS TO FLAK' }
+  },
+  {
+    id: 'UAP-068', lat: 45.210, lng: -123.197, city: 'Trent Photos, USA', date: '1950-05-11T19:30:00Z', type: 'saucer', source: 'Photographic Evidence',
+    desc: 'Farmer published clear photos of an asymmetrical, metallic flying disc over his farm. Condon Committee concluded the photos were authentic and unexplained.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN', alt_ft: 'UNKNOWN', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-069', lat: 39.492, lng: -0.475, city: 'Manises Incident, ESP', date: '1979-11-11T23:00:00Z', type: 'tic-tac', source: 'Flight TAE-297',
+    desc: 'Commercial flight forced into an emergency landing by 3 intense glowing red lights that tracked and collided with the plane’s trajectory. Intercepting jets were outrun.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: 'MACH 1+', alt_ft: '15,000', rcs_sqm: 'LARGE', threat: 'HOSTILE', emi: 'COMMUNICATION JAMMING' }
+  },
+  {
+    id: 'UAP-070', lat: 46.866, lng: -69.255, city: 'Allagash Abductions, USA', date: '1976-08-20T21:00:00Z', type: 'orb', source: 'Civilian',
+    desc: 'Four men on a canoe trip saw a massive glowing aura. They flashed a light at it, and it engulfed them. All four experienced identical missing time and trauma.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'HOVER', alt_ft: 'LOW', rcs_sqm: '80 FEET', threat: 'ELEVATED', emi: 'MISSING TIME EFFECT' }
   }
 ];
 
