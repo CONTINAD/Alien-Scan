@@ -99,6 +99,81 @@ const SIGHTINGS_DATA = [
     id: 'UAP-020', lat: 43.830, lng: 5.980, city: 'Valensole, FRA', date: '1965-07-01T05:45:00Z', type: 'tic-tac', source: 'Gendarmerie Nationale',
     desc: 'Farmer saw an egg-shaped craft and two entities. He was paralyzed by a beam of light. Craft left impressions in the ground and anomalous moisture levels in soil.',
     classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'PARALYSIS INDUCED' }
+  },
+  {
+    id: 'UAP-021', lat: 38.252, lng: -85.758, city: 'Louisville, KY (Mantell)', date: '1948-01-07T14:45:00Z', type: 'orb', source: 'US Air Force',
+    desc: 'Capt. Thomas Mantell died in a crash while pursuing a massive, glowing metallic object. Classified initially as Venus, later a Skyhook balloon, fiercely debated.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: '25,000+', rcs_sqm: 'LARGE', threat: 'CRITICAL', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-022', lat: -27.469, lng: 153.025, city: 'Brisbane, AUS (Tully Saucer)', date: '1966-01-19T09:00:00Z', type: 'saucer', source: 'Civilian & RAAF',
+    desc: 'Farmer witnessed a saucer emerge from a lagoon, leaving a massive circular reed bed "nest" flattened clockwise. Highly credible early physical trace case.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'RAPID ASCENT', alt_ft: '0 (WATER ESCAPE)', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'CROP FLATTENING' }
+  },
+  {
+    id: 'UAP-023', lat: 60.128, lng: 18.643, city: 'Ghost Rockets, SWE', date: '1946-08-11T20:00:00Z', type: 'tic-tac', source: 'Swedish Military',
+    desc: 'Hundreds of reports of missile-shaped objects crashing into lakes without explosions or debris. Swedish military tracked them on radar performing erratic maneuvers.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: '0.8', alt_ft: '5,000', rcs_sqm: 'MISSILE-SIZE', threat: 'ELEVATED', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-024', lat: 18.450, lng: -67.150, city: 'Aguadilla, PRI', date: '2013-04-25T21:20:00Z', type: 'orb', source: 'US Customs & Border Protection',
+    desc: 'Homeland Security aircraft captured thermal video of an object flying fast, low to the ground, entering the ocean without splashing, and splitting in two.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '0.1-0.2', alt_ft: '0-500 (TRANS-MEDIUM)', rcs_sqm: 'SMALL', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-025', lat: 31.768, lng: 35.213, city: 'Dome of the Rock, ISR', date: '2011-01-28T01:00:00Z', type: 'orb', source: 'Civilian Mass Sighting',
+    desc: 'Glowing orb descended over the Temple Mount, hovered, flashed a brilliant light, and shot straight up into space. Filmed from multiple angles synchronously.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'HYPERSONIC ASCENT', alt_ft: '500 > SUB-ORBITAL', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'LIGHT BURST' }
+  },
+  {
+    id: 'UAP-026', lat: -33.448, lng: -70.669, city: 'Santiago, CHL (Helicopter)', date: '2014-11-11T13:52:00Z', type: 'orb', source: 'Chilean Navy (CEFAA)',
+    desc: 'Navy helicopter tracked a moving object on IR camera for 10 minutes. Object discharged a massive plume of unknown hot substance twice before vanishing.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '0.1', alt_ft: '4,500', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'THERMAL DISCHARGE' }
+  },
+  {
+    id: 'UAP-027', lat: 21.306, lng: -157.858, city: 'Oahu, HI (GO FAST)', date: '2015-01-01T00:00:00Z', type: 'orb', source: 'US Navy (F/A-18 ATFLIR)',
+    desc: 'Object caught skimming the ocean surface at very high speed against the wind without an observable exhaust plume. Categorized by AATIP.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '0.8', alt_ft: 'LOW', rcs_sqm: 'SMALL', threat: 'UNKNOWN', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-028', lat: 34.900, lng: -117.885, city: 'Edwards AFB, CA', date: '1957-05-03T10:00:00Z', type: 'saucer', source: 'US Military (Gordon Cooper)',
+    desc: 'Astronaut Gordon Cooper stated flight test camera crews filmed a metallic saucer extending landing gear and touching down on a dry lake bed before departing.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'HOVER', alt_ft: '0', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-029', lat: 10.395, lng: 107.810, city: 'Vietnam War (Patrol Boats)', date: '1968-06-15T23:00:00Z', type: 'orb', source: 'US Navy & Australian Military',
+    desc: 'Glowing circular crafts tracked by US patrol boats in the DMZ. The crafts fired upon the boats, destroying PCF-19. Classified as friendly fire by command.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'HOVER/RAPID', alt_ft: 'LOW', rcs_sqm: 'UNKNOWN', threat: 'HOSTILE', emi: 'WEAPONIZED' }
+  },
+  {
+    id: 'UAP-030', lat: 31.968, lng: -99.901, city: 'Texas Mutilations, USA', date: '1970-01-01T00:00:00Z', type: 'triangle', source: 'Civilian & FBI',
+    desc: 'Reports of large silent triangular craft associated with highly precise, bloodless cattle mutilations. High radiation observed at sites.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'UNKNOWN', alt_ft: 'LOW', rcs_sqm: 'LARGE', threat: 'ELEVATED', emi: 'RADIATION TRACES' }
+  },
+  {
+    id: 'UAP-031', lat: 62.039, lng: 129.733, city: 'Yakutsk, RUS (Tunguska Event)', date: '1908-06-30T07:14:00Z', type: 'orb', source: 'Historical / Scientific',
+    desc: 'Massive atmospheric explosion flattened 2,000 sq km of forest. Some theorists propose it was a destroyed alien craft, though meteor impact is the consensus.',
+    classification: 'civilian', color: '#00e5ff', telemetry: { speed_mach: 'HYPERSONIC', alt_ft: '30,000 (AIRBURST)', rcs_sqm: 'MASSIVE', threat: 'CATASTROPHIC', emi: 'SEISMIC EVENT' }
+  },
+  {
+    id: 'UAP-032', lat: -41.300, lng: 174.783, city: 'Kaikoura, NZL', date: '1978-12-21T00:00:00Z', type: 'orb', source: 'Aviation & Media',
+    desc: 'A series of sightings by cargo pilots and a TV crew. Brilliant lights matched speeds with the plane, tracked on Wellington radar, and filmed on 16mm.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: '10,000-20,000', rcs_sqm: 'LARGE', threat: 'LOW', emi: 'RADAR CONFIRMATION' }
+  },
+  {
+    id: 'UAP-033', lat: 46.519, lng: 6.632, city: 'Lake Geneva, CHE', date: '1954-09-01T00:00:00Z', type: 'saucer', source: 'Civilian Mass Sighting',
+    desc: 'During the 1954 European wave, thousands witnessed glowing discs darting over the lake. Some reports included occupants in diving-suit-like gear.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'HIGH', alt_ft: '1,000', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-034', lat: 51.107, lng: -1.314, city: 'Winchester, UK', date: '1992-12-11T00:00:00Z', type: 'triangle', source: 'Civilian',
+    desc: 'A massive black triangular craft hovered silently over a residential area, blocking out the stars. Witnesses reported a low hum and static electricity.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'HOVER', alt_ft: '500', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'STATIC FIELD' }
+  },
+  {
+    id: 'UAP-035', lat: -15.793, lng: -47.882, city: 'Night of the UFOs, BRA', date: '1986-05-19T20:00:00Z', type: 'orb', source: 'Brazilian Air Force',
+    desc: 'Over 20 UAPs jammed radar and outmaneuvered intercepting F-5 jets across several states. Official press conference declared them intelligently controlled.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'UP TO MACH 15', alt_ft: '30,000+', rcs_sqm: 'VARIABLE', threat: 'ELEVATED', emi: 'RADAR JAMMING' }
   }
 ];
 
@@ -323,13 +398,107 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Boot Sequence Logic
+// Advanced Boot Sequence Logic
 const bootOverlay = document.getElementById('bootSequence');
 const startBtn = document.getElementById('startBtn');
+const bootTitle = document.getElementById('bootTitle');
+const bootProgressText = document.getElementById('bootProgressText');
+const bootProgressBar = document.getElementById('bootProgressBar');
+const bootTerminal = document.getElementById('bootTerminal');
+
+const terminalLines = [
+  "INITIALIZING QUANTUM UPLINK...",
+  "BYPASSING A.A.R.O. FIREWALLS... [SUCCESS]",
+  "ESTABLISHING ORACLE V2 CONNECTION... [SUCCESS]",
+  "SYNCING JITO BUNDLES... [SUCCESS]",
+  "DOWNLOADING GLOBAL SENSOR CACHE...",
+  "DECRYPTING SATELLITE IMAGERY...",
+  "CALIBRATING RADAR FREQUENCIES...",
+  "LOADING HISTORICAL UAP DATASETS...",
+  "SYSTEM INTEGRITY CHECK: PASS",
+  "AWAITING MANUAL INITIALIZATION"
+];
+
+let currentLine = 0;
+
+function addTerminalLine() {
+  if (currentLine < terminalLines.length) {
+    const p = document.createElement('p');
+    p.classList.add('boot-text');
+
+    let text = terminalLines[currentLine];
+    if (text.includes("[SUCCESS]") || text.includes("PASS")) {
+      text = text.replace("[SUCCESS]", '<span class="text-green">[SUCCESS]</span>').replace("PASS", '<span class="text-green">PASS</span>');
+    }
+
+    p.innerHTML = `> ${text}`;
+    bootTerminal.appendChild(p);
+
+    // Auto-scroll
+    if (bootTerminal.children.length > 6) {
+      bootTerminal.removeChild(bootTerminal.firstChild);
+    }
+
+    currentLine++;
+
+    // Random delay between lines
+    const delay = Math.random() * 300 + 100;
+    setTimeout(addTerminalLine, delay);
+  } else {
+    // Unlock button when done
+    startBtn.classList.remove('disabled');
+    startBtn.removeAttribute('disabled');
+    startBtn.innerHTML = '<i class="fa-solid fa-power-off"></i> INITIALIZE SYSTEM';
+  }
+}
+
+// Start terminal sequence
+setTimeout(addTerminalLine, 500);
+
+// Decryption effect for title
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+let interval = null;
+
+function startDecryption() {
+  let iteration = 0;
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    bootTitle.innerText = bootTitle.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return bootTitle.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+
+    if (iteration >= bootTitle.dataset.value.length) {
+      clearInterval(interval);
+    }
+
+    iteration += 1 / 3;
+  }, 40);
+}
+
+// Progress Bar Animation
+let progress = 0;
+const progressInterval = setInterval(() => {
+  progress += Math.random() * 5 + 1;
+  if (progress > 100) progress = 100;
+
+  bootProgressBar.style.width = `${progress}%`;
+  bootProgressText.innerText = `${Math.floor(progress)}%`;
+
+  if (progress === 100) {
+    clearInterval(progressInterval);
+    setTimeout(startDecryption, 500);
+  }
+}, 50);
 
 startBtn.addEventListener('click', () => {
   bootOverlay.classList.add('boot-hidden');
-  // We can play an initialization sound here if the user provides audio files
 });
 
 // Simulated On-Chain Solana Data Stream
@@ -364,3 +533,72 @@ const addOnchainItem = () => {
 
 // Stream new fake on-chain data every 400-1200ms
 setInterval(addOnchainItem, Math.random() * 800 + 400);
+
+// Diagnostics Panel Logic
+const anomalyIndex = document.getElementById('anomalyIndex');
+const anomalyChart = document.getElementById('anomalyChart');
+
+// Initialize 20 bars
+for (let i = 0; i < 20; i++) {
+  const bar = document.createElement('div');
+  bar.classList.add('bar');
+  bar.style.height = `${Math.random() * 100}%`;
+  anomalyChart.appendChild(bar);
+}
+
+setInterval(() => {
+  // Fluctuate Index
+  const baseAvg = 8.00;
+  const variance = Math.random() * 1.5 - 0.5;
+  anomalyIndex.innerText = `${(baseAvg + variance).toFixed(2)} μSv/h`;
+
+  if (variance > 0.8) {
+    anomalyIndex.style.color = 'var(--danger)';
+    anomalyIndex.style.textShadow = '0 0 10px var(--danger)';
+  } else if (variance > 0.4) {
+    anomalyIndex.style.color = 'var(--warning)';
+    anomalyIndex.style.textShadow = '0 0 10px var(--warning)';
+  } else {
+    anomalyIndex.style.color = 'var(--info)';
+    anomalyIndex.style.textShadow = '0 0 10px var(--info-glow)';
+  }
+
+  // Update chart
+  if (anomalyChart.children.length > 0) {
+    anomalyChart.removeChild(anomalyChart.firstChild);
+    const bar = document.createElement('div');
+    bar.classList.add('bar');
+    bar.style.height = `${Math.random() * 100}%`;
+    anomalyChart.appendChild(bar);
+  }
+}, 800);
+
+// Map Layers Toggle
+const layerBtns = document.querySelectorAll('.layer-btn');
+layerBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    layerBtns.forEach(b => b.classList.remove('active'));
+    e.target.closest('button').classList.add('active');
+
+    // Simulate layer swap effect on globe
+    document.getElementById('globeViz').style.filter = 'sepia(1) hue-rotate(180deg) contrast(1.5)';
+    setTimeout(() => {
+      document.getElementById('globeViz').style.filter = 'none';
+
+      const layer = e.target.closest('button').dataset.layer;
+      switch (layer) {
+        case 'thermal':
+          world.pointColor(() => '#ff003c').atmosphereColor('#ff003c');
+          break;
+        case 'radar':
+          world.pointColor(() => '#00ff41').atmosphereColor('#00ff41');
+          break;
+        case 'emf':
+          world.pointColor(() => '#00e5ff').atmosphereColor('#00e5ff');
+          break;
+        default:
+          world.pointColor(d => d.color).atmosphereColor('lightgreen');
+      }
+    }, 200);
+  });
+});
