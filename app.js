@@ -408,3 +408,45 @@ filterBtns.forEach(btn => {
     }
   });
 });
+
+// Boot Sequence Logic
+const bootOverlay = document.getElementById('bootSequence');
+const startBtn = document.getElementById('startBtn');
+
+startBtn.addEventListener('click', () => {
+  bootOverlay.classList.add('boot-hidden');
+  // We can play an initialization sound here if the user provides audio files
+});
+
+// Simulated On-Chain Solana Data Stream
+const onchainStream = document.getElementById('onchainStream');
+
+const generateHash = () => {
+  const chars = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+  let hash = '';
+  for (let i = 0; i < 44; i++) {
+    hash += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return hash;
+}
+
+const addOnchainItem = () => {
+  if (onchainStream.children.length > 8) {
+    onchainStream.removeChild(onchainStream.firstChild);
+  }
+
+  const div = document.createElement('div');
+  div.classList.add('onchain-item');
+
+  const hash = generateHash();
+  const shortHash = `${hash.substring(0, 4)}...${hash.substring(40)}`;
+
+  const events = ['MINT', 'BURN', 'ENCRYPT', 'RELAY'];
+  const event = events[Math.floor(Math.random() * events.length)];
+
+  div.innerHTML = `[${event}] <span class="onchain-hash">${shortHash}</span> -> <span class="onchain-status">VERIFIED</span>`;
+  onchainStream.appendChild(div);
+}
+
+// Stream new fake on-chain data every 400-1200ms
+setInterval(addOnchainItem, Math.random() * 800 + 400);

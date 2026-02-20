@@ -20,6 +20,18 @@
 <body>
   <div class="crt-overlay"></div>
 
+  <!-- Boot Sequence Overlay -->
+  <div id="bootSequence" class="boot-overlay">
+    <div class="boot-content">
+      <h1 class="boot-title">DEEP SPACE TELEMETRY</h1>
+      <p class="boot-text">INITIALIZING QUANTUM UPLINK...</p>
+      <p class="boot-text">ESTABLISHING ORACLE V2 CONNECTION... <span class="text-green">[SUCCESS]</span></p>
+      <p class="boot-text">BYPASSING A.A.R.O. FIREWALLS... <span class="text-green">[SUCCESS]</span></p>
+      <p class="boot-text">SYNCING JITO BUNDLES... <span class="text-green">[SUCCESS]</span></p>
+      <button id="startBtn" class="boot-btn"><i class="fa-solid fa-power-off"></i> INITIALIZE SYSTEM</button>
+    </div>
+  </div>
+
   <div class="hud-container">
     <header class="top-nav">
       <div class="logo">
@@ -59,7 +71,18 @@
     </div>
 
     <main class="main-content">
+      <div class="radar-sweep-container">
+        <div class="radar-sweep"></div>
+      </div>
       <div id="globeViz" class="globe-container"></div>
+
+      <!-- On-Chain Data Feed (Floating) -->
+      <div class="onchain-feed">
+        <div class="onchain-header"><i class="fa-solid fa-link"></i> SOLANA VERIFIED INTERCEPTS</div>
+        <div class="onchain-list" id="onchainStream">
+          <!-- Populated by JS -->
+        </div>
+      </div>
 
       <aside class="sidebar">
         <div class="sidebar-header">
