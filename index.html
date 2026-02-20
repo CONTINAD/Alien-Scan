@@ -23,12 +23,19 @@
   <!-- Boot Sequence Overlay -->
   <div id="bootSequence" class="boot-overlay">
     <div class="boot-content">
-      <h1 class="boot-title">DEEP SPACE TELEMETRY</h1>
-      <p class="boot-text">INITIALIZING QUANTUM UPLINK...</p>
-      <p class="boot-text">ESTABLISHING ORACLE V2 CONNECTION... <span class="text-green">[SUCCESS]</span></p>
-      <p class="boot-text">BYPASSING A.A.R.O. FIREWALLS... <span class="text-green">[SUCCESS]</span></p>
-      <p class="boot-text">SYNCING JITO BUNDLES... <span class="text-green">[SUCCESS]</span></p>
-      <button id="startBtn" class="boot-btn"><i class="fa-solid fa-power-off"></i> INITIALIZE SYSTEM</button>
+      <div class="boot-logo-container">
+        <i class="fa-solid fa-radar fa-spin-pulse boot-icon"></i>
+      </div>
+      <h1 class="boot-title">$ALIENSCAN</h1>
+      <div class="boot-terminal-text">
+        <p class="boot-text">> INITIALIZING QUANTUM UPLINK...</p>
+        <p class="boot-text">> ESTABLISHING ORACLE V2 CONNECTION... <span class="text-green">[SUCCESS]</span></p>
+        <p class="boot-text">> BYPASSING A.A.R.O. FIREWALLS... <span class="text-green">[SUCCESS]</span></p>
+        <p class="boot-text">> SYNCING JITO BUNDLES... <span class="text-green">[SUCCESS]</span></p>
+      </div>
+      <div class="boot-btn-wrapper">
+        <button id="startBtn" class="boot-btn"><i class="fa-solid fa-power-off"></i> INITIALIZE SYSTEM</button>
+      </div>
     </div>
   </div>
 
@@ -36,7 +43,7 @@
     <header class="top-nav">
       <div class="logo">
         <i class="fa-solid fa-radar fa-spin-pulse scan-icon"></i>
-        <h1>ALIEN SCAN</h1>
+        <h1>$ALIENSCAN</h1>
       </div>
       <div class="status">
         <span class="blinking-dot"></span>
