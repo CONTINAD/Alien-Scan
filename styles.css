@@ -154,6 +154,93 @@ body {
   text-shadow: 0 0 8px var(--danger);
 }
 
+/* Live Intelligence Ticker */
+.ticker-wrap {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid var(--hud-border);
+  display: flex;
+  align-items: center;
+  height: 35px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1);
+}
+
+.ticker-heading {
+  background: var(--neon-green);
+  color: var(--bg-color);
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  box-shadow: 5px 0 15px rgba(0, 255, 65, 0.5);
+  position: relative;
+}
+
+.ticker-heading::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 17.5px solid transparent;
+  border-bottom: 17.5px solid transparent;
+  border-left: 10px solid var(--neon-green);
+}
+
+.ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-right: 1px solid rgba(0, 255, 65, 0.3);
+}
+
+.text-green {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+}
+
+.text-cyan {
+  color: var(--info);
+  text-shadow: 0 0 5px var(--info);
+}
+
+.text-danger {
+  color: var(--danger);
+  text-shadow: 0 0 5px var(--danger);
+}
+
+.text-warning {
+  color: var(--warning);
+  text-shadow: 0 0 5px var(--warning);
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 /* Main Content Area */
 .main-content {
   display: flex;

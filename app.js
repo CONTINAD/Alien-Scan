@@ -203,31 +203,31 @@ const world = Globe()(globeContainer)
   .labelsData(SIGHTINGS_DATA)
   .labelLat(d => d.lat)
   .labelLng(d => d.lng)
-  .labelText(d => d.city)
-  .labelSize(1.5)
-  .labelDotRadius(0.5)
+  .labelText(d => d.id.startsWith('UAP-00') ? d.city : '')
+  .labelSize(1)
+  .labelDotRadius(0.3)
   .labelColor(d => d.color)
   .labelResolution(2)
   .pointsData(SIGHTINGS_DATA)
   .pointColor(d => d.color)
-  .pointAltitude(0.05)
-  .pointRadius(0.5)
+  .pointAltitude(0.01)
+  .pointRadius(0.2)
   .pointsMerge(false)
   .onPointClick(point => openModal(point))
   .onLabelClick(label => openModal(label))
   .arcsData(ARCS_DATA)
   .arcColor('color')
-  .arcDashLength(0.4)
-  .arcDashGap(0.2)
-  .arcDashAnimateTime(1500)
-  .arcStroke(0.5);
+  .arcDashLength(0.2)
+  .arcDashGap(0.1)
+  .arcDashAnimateTime(2500)
+  .arcStroke(0.2);
 
-// Add rings around points to simulate radar pings
-world.ringsData(SIGHTINGS_DATA)
+// Add rings around points to simulate radar pings (only for curated data to reduce clutter)
+world.ringsData(CURATED_SIGHTINGS)
   .ringColor(d => d.color)
-  .ringMaxRadius(5)
+  .ringMaxRadius(3)
   .ringPropagationSpeed(1)
-  .ringRepeatPeriod(1000);
+  .ringRepeatPeriod(2000);
 
 // Auto-rotate setup
 world.controls().autoRotate = true;
