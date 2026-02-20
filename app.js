@@ -1,195 +1,109 @@
-// Curated Data for sightings
-const CURATED_SIGHTINGS = [
+// Authentic Historical Data for sightings
+const SIGHTINGS_DATA = [
   {
-    id: 'UAP-001',
-    lat: 32.897,
-    lng: -117.224, // Nimitz Incident area (approx)
-    city: 'Pacific Ocean (Off San Diego)',
-    date: '2004-11-14 14:32:00Z',
-    type: 'tic-tac',
-    source: 'A.A.R.O. (US Navy USS Nimitz)',
-    desc: 'White, smooth, no edges 40-foot oblong shape. Descended from 80k feet to sea level in seconds. No visible exhaust or control surfaces.',
-    classification: 'declassified',
-    color: '#00ff41', // green
-    telemetry: { speed_mach: '24.5', alt_ft: '80,000 > 50', rcs_sqm: '0.01', threat: 'UNKNOWN', emi: 'SEVERE' }
+    id: 'UAP-001', lat: 33.952, lng: -105.331, city: 'Roswell, NM (Foster Ranch)', date: '1947-07-08T00:00:00Z', type: 'saucer', source: 'Roswell Army Air Field (RAAF)',
+    desc: 'Metallic and rubber debris recovered. Initially reported as a "flying disc," later retracted as a weather balloon. Still heavily debated as an extraterrestrial crash site.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0 (CRASH)', rcs_sqm: 'CONFIDENTIAL', threat: 'UNKNOWN', emi: 'NONE' }
   },
   {
-    id: 'UAP-002',
-    lat: 28.392,
-    lng: -80.607, // Cape Canaveral
-    city: 'Cape Canaveral, FL',
-    date: '2023-09-12 22:15:00Z',
-    type: 'orb',
-    source: 'Civilian Radar & Optic',
-    desc: 'Metallic sphere hovering near restricted airspace. Unaffected by heavy winds. Accelerated vertically at Mach 3.',
-    classification: 'civilian',
-    color: '#00e5ff', // cyan
-    telemetry: { speed_mach: '3.1', alt_ft: '400', rcs_sqm: '0.5', threat: 'ELEVATED', emi: 'MODERATE' }
+    id: 'UAP-002', lat: 52.094, lng: 1.313, city: 'Rendlesham Forest, UK', date: '1980-12-26T03:00:00Z', type: 'triangle', source: 'USAF Personnel (RAF Bentwaters)',
+    desc: 'Glowing object with multicolored lights moving through the forest. Scorch marks found. Witness claimed telepathic binary code transmission connecting to ancient sites.',
+    classification: 'declassified', color: '#ff003c', telemetry: { speed_mach: 'HOVER', alt_ft: '0-100', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'RADIATION TRACES' }
   },
   {
-    id: 'UAP-003',
-    lat: 51.178,
-    lng: -1.826, // Stonehenge
-    city: 'Wiltshire, UK',
-    date: '2024-01-05 03:45:00Z',
-    type: 'triangle',
-    source: 'M.U.F.O.N. Field Report',
-    desc: 'Massive silent black triangle, estimated 300ft across. Three faint lights at corners, red pulsing light in center.',
-    classification: 'civilian',
-    color: '#ff003c', // red
-    telemetry: { speed_mach: '0.0', alt_ft: '150', rcs_sqm: '150+', threat: 'LOW', emi: 'MAGNETIC DEVIATION' }
+    id: 'UAP-003', lat: 33.450, lng: -112.074, city: 'Phoenix, AZ', date: '1997-03-13T22:00:00Z', type: 'triangle', source: 'Civilian Mass Sighting',
+    desc: 'Massive V-shaped formation of lights traversing the sky silently. Second event involved stationary glowing orbs. Witnessed by thousands, including the Governor.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: '0.2', alt_ft: '5,000-15,000', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'NONE' }
   },
   {
-    id: 'UAP-004',
-    lat: -34.603,
-    lng: -58.381, // Buenos Aires
-    city: 'Buenos Aires, ARG',
-    date: '2023-11-20 20:10:00Z',
-    type: 'saucer',
-    source: 'Local Air Traffic Control',
-    desc: 'Classic disc shape pacing commercial airliner. Interfered with transponder signals. Disappeared visually but remained on radar.',
-    classification: 'declassified',
-    color: '#ffb000', // orange
-    telemetry: { speed_mach: '0.85', alt_ft: '35,000', rcs_sqm: '12.0', threat: 'CRITICAL', emi: 'RADIO JAMMING' }
+    id: 'UAP-004', lat: 40.184, lng: -79.463, city: 'Kecksburg, PA', date: '1965-12-09T16:47:00Z', type: 'orb', source: 'Civilian & Military Response',
+    desc: 'Brilliant fireball crashed in woods. Witnesses described a metallic, acorn-shaped object with hieroglyphics. Area secured by military; officially claimed as meteor/satellite.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'HYPERSONIC', alt_ft: '0 (CRASH)', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
   },
   {
-    id: 'UAP-005',
-    lat: 37.235,
-    lng: -115.811, // Area 51 (Groom Lake)
-    city: 'Nevada Test and Training Range',
-    date: '2024-02-18 01:12:00Z',
-    type: 'orb',
-    source: 'Whistleblower Leak (Unconfirmed)',
-    desc: 'Cluster of 5 glowing red orbs performing impossible aerodynamic maneuvers above restricted airspace.',
-    classification: 'declassified',
-    color: '#00e5ff',
-    telemetry: { speed_mach: 'UNCALCULATED', alt_ft: '60,000', rcs_sqm: 'FLUCTUATING', threat: 'RESTRICTED', emi: 'NONE' }
+    id: 'UAP-005', lat: 32.220, lng: -98.202, city: 'Stephenville, TX', date: '2008-01-08T18:15:00Z', type: 'tic-tac', source: 'Civilian Radar & Witnesses',
+    desc: 'Silent object with bright lights flying low and fast, pursued by fighter jets. Estimated half-mile long, 3,000 mph. Radar confirmed unidentified tracks.',
+    classification: 'civilian', color: '#00ff41', telemetry: { speed_mach: '3.9', alt_ft: '2,000', rcs_sqm: 'VERY LARGE', threat: 'ELEVATED', emi: 'RADAR ANOMALY' }
   },
   {
-    id: 'UAP-006',
-    lat: 35.360,
-    lng: 138.727, // Mt Fuji
-    city: 'Mount Fuji, JPN',
-    date: '2023-08-04 19:30:00Z',
-    type: 'tic-tac',
-    source: 'Civilian Observatory',
-    desc: 'Cylindrical craft hovering near the summit. Emitted a low-frequency hum that vibrated the ground. Ascended rapidly into orbit.',
-    classification: 'civilian',
-    color: '#00ff41',
-    telemetry: { speed_mach: '15.0+ (Ascent)', alt_ft: '12,388', rcs_sqm: '0.1', threat: 'LOW', emi: 'SEISMIC ANOMALY' }
+    id: 'UAP-006', lat: 31.000, lng: -117.000, city: 'Pacific Ocean (Nimitz)', date: '2004-11-14T14:32:00Z', type: 'tic-tac', source: 'US Navy (USS Nimitz)',
+    desc: 'White, smooth 40-foot oblong shape. Descended from 80k feet to sea level in seconds. No visible exhaust or control surfaces. Jammed radar systems heavily.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: '24.5+', alt_ft: '80,000 > 50', rcs_sqm: '0.01', threat: 'UNKNOWN', emi: 'SEVERE JAMMING' }
   },
   {
-    id: 'UAP-007',
-    lat: -0.023,
-    lng: 37.906, // Kenya
-    city: 'Mount Kenya, KEN',
-    date: '2024-02-19 23:45:00Z',
-    type: 'triangle',
-    source: 'M.U.F.O.N.',
-    desc: 'Large triangular craft spotted by multiple witnesses. Cast a beam of light into the dense forest before cloaking.',
-    classification: 'civilian',
-    color: '#ff003c',
-    telemetry: { speed_mach: '0.5', alt_ft: '500', rcs_sqm: 'N/A (CLOAKED)', threat: 'UNKNOWN', emi: 'OPTICAL DISTORTION' }
+    id: 'UAP-007', lat: 41.980, lng: -87.900, city: "O'Hare Airport, IL", date: '2006-11-07T16:15:00Z', type: 'saucer', source: 'Aviation Personnel (FAA)',
+    desc: 'Metallic, saucer-shaped craft hovering silently over Gate C17. Shot straight up through cloud cover, leaving a perfectly round hole in the clouds. FAA called it weather.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN (RAPID ASCENT)', alt_ft: '1,500', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'NONE' }
   },
   {
-    id: 'UAP-008',
-    lat: -22.906,
-    lng: -43.172, // Rio
-    city: 'Rio de Janeiro, BRA',
-    date: '1977-10-15 00:00:00Z',
-    type: 'saucer',
-    source: 'Operação Prato (Declassified)',
-    desc: 'Luminous objects reportedly fired "light beams" at residents. Brazilian military investigation confirmed objects on radar and film.',
-    classification: 'declassified',
-    color: '#ffb000',
-    telemetry: { speed_mach: 'VARIABLE', alt_ft: '0-5,000', rcs_sqm: 'CONFIDENTIAL', threat: 'HOSTILE', emi: 'RADIATION BURST' }
+    id: 'UAP-008', lat: 35.689, lng: 51.389, city: 'Tehran, IRN', date: '1976-09-19T00:30:00Z', type: 'orb', source: 'Iranian Air Force (DIA Report)',
+    desc: 'Brilliant object jammed radar and communications of two F-4 jets attempting to intercept. Weapons systems disabled when pilot attempted to fire.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: '15,000+', rcs_sqm: 'FLUCTUATING', threat: 'HOSTILE', emi: 'WEAPONS OFF-LINE' }
+  },
+  {
+    id: 'UAP-009', lat: 50.850, lng: 4.351, city: 'Brussels, BEL', date: '1990-03-30T23:00:00Z', type: 'triangle', source: 'Belgian Air Force',
+    desc: 'Multiple black triangles tracked by NATO radar and F-16s. Demonstrated impossible acceleration, pulling 40Gs, breaking lock from jet radars.',
+    classification: 'declassified', color: '#ff003c', telemetry: { speed_mach: '0.1 to 1.5 in seconds', alt_ft: '10,000 > 3,000', rcs_sqm: 'SHIFTING', threat: 'ELEVATED', emi: 'RADAR JAMMING' }
+  },
+  {
+    id: 'UAP-010', lat: -37.930, lng: 145.120, city: 'Westall, AUS', date: '1966-04-06T11:00:00Z', type: 'saucer', source: 'Civilian Mass Sighting',
+    desc: 'Silvery disc-shaped craft descended, hovered over a school, and landed in a nearby paddock before ascending rapidly. Over 200 witnesses.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'HOVER', alt_ft: '0-200', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-011', lat: 41.300, lng: -73.900, city: 'Hudson Valley, NY', date: '1983-03-24T20:00:00Z', type: 'triangle', source: 'Civilian & Local Police',
+    desc: 'Massive, silent boomerang or V-shaped array of lights hovering over highways and nuclear facilities. Reported by thousands over several years.',
+    classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: '0.05', alt_ft: '500-1,000', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-012', lat: -21.550, lng: -45.430, city: 'Varginha, BRA', date: '1996-01-20T15:30:00Z', type: 'saucer', source: 'Brazilian Military & Civilians',
+    desc: 'Claims of a crashed cigar-shaped craft and the capture of biological anomalous entities by military forces. Heavy military quarantine reported.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN', alt_ft: 'CRASH', rcs_sqm: 'CONFIDENTIAL', threat: 'UNKNOWN', emi: 'BIOLOGICAL HAZARD' }
+  },
+  {
+    id: 'UAP-013', lat: -0.930, lng: -48.280, city: 'Colares, BRA (Operacao Prato)', date: '1977-10-01T00:00:00Z', type: 'orb', source: 'Brazilian Air Force (FAB)',
+    desc: 'Luminous objects fired light beams at residents, causing burns. Military investigation confirmed objects on radar and film. Over 80 victims treated.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'VARIABLE', alt_ft: '50-1,000', rcs_sqm: 'CONFIDENTIAL', threat: 'CRITICAL', emi: 'RADIATION BURST' }
+  },
+  {
+    id: 'UAP-014', lat: 34.050, lng: -106.890, city: 'Socorro, NM', date: '1964-04-24T17:45:00Z', type: 'tic-tac', source: 'Police Report (Officer Lonnie Zamora)',
+    desc: 'Egg-shaped craft encountered on the ground with insignia. Two small figures seen. Craft ascended with a loud roar and blue flame. Burn marks left.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'THERMAL SCORCHING' }
+  },
+  {
+    id: 'UAP-015', lat: 38.895, lng: -77.036, city: 'Washington, D.C.', date: '1952-07-26T23:30:00Z', type: 'orb', source: 'US Air Force & CAA Radar',
+    desc: 'Formation of bright orbs tracked on radar over the White House and Capitol. Outran intercepting F-94 interceptors. Officially blamed on temperature inversions.',
+    classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: '7.0+', alt_ft: '1,000-7,000', rcs_sqm: 'SOLID', threat: 'CRITICAL', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-016', lat: 43.490, lng: -65.710, city: 'Shag Harbour, CAN', date: '1967-10-04T23:20:00Z', type: 'saucer', source: 'RCMP & Canadian Military',
+    desc: 'Four glowing lights crashed into the ocean. Yellow foam found on the surface. Navy divers found nothing, though underwater tracking reported second object linking up.',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'SUB-SURFACE', alt_ft: '-50 (UNDERWATER)', rcs_sqm: 'MILITARY CLASSIFIED', threat: 'UNKNOWN', emi: 'SONAR ANOMALY' }
+  },
+  {
+    id: 'UAP-017', lat: -17.850, lng: 31.420, city: 'Ariel School, ZWE', date: '1994-09-16T10:15:00Z', type: 'saucer', source: 'Civilian Mass Sighting (Children)',
+    desc: 'Silver craft landed near a schoolyard. Entities emerged and telepathically communicated environmental warnings to over 60 children. Consistent testimonies.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: 'HOVER', alt_ft: '0', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'UNKNOWN' }
+  },
+  {
+    id: 'UAP-018', lat: 30.500, lng: -78.000, city: 'East Coast US (GIMBAL)', date: '2015-01-22T15:00:00Z', type: 'saucer', source: 'US Navy (USS Roosevelt)',
+    desc: 'Top-shaped object flying against 120-knot winds without flight surfaces or exhaust. Captured on ATFLIR. Pilot exclaimed, "There\'s a whole fleet of them!"',
+    classification: 'declassified', color: '#ffb000', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '25,000', rcs_sqm: 'CLEAR', threat: 'UNKNOWN', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-019', lat: 46.852, lng: -121.760, city: 'Mount Rainier, WA', date: '1947-06-24T15:00:00Z', type: 'saucer', source: 'Civilian Pilot (Kenneth Arnold)',
+    desc: 'Nine metallic, crescent-shaped objects flying in formation. Estimated speed at 1,200 mph. Coined the term "flying saucer" due to skipping motion.',
+    classification: 'civilian', color: '#ffb000', telemetry: { speed_mach: '1.7', alt_ft: '10,000', rcs_sqm: 'UNKNOWN', threat: 'LOW', emi: 'NONE' }
+  },
+  {
+    id: 'UAP-020', lat: 43.830, lng: 5.980, city: 'Valensole, FRA', date: '1965-07-01T05:45:00Z', type: 'tic-tac', source: 'Gendarmerie Nationale',
+    desc: 'Farmer saw an egg-shaped craft and two entities. He was paralyzed by a beam of light. Craft left impressions in the ground and anomalous moisture levels in soil.',
+    classification: 'declassified', color: '#00ff41', telemetry: { speed_mach: 'UNKNOWN', alt_ft: '0', rcs_sqm: 'UNKNOWN', threat: 'ELEVATED', emi: 'PARALYSIS INDUCED' }
   }
 ];
 
-// Generate additional random sightings to populate the globe
-const generateRandomSightings = (count) => {
-  const types = ['orb', 'saucer', 'tic-tac', 'triangle'];
-  const sources = [
-    'Civilian Radar',
-    'M.U.F.O.N. Field Report',
-    'Declassified Military Log',
-    'Anonymous Whistleblower',
-    'Commercial Airline Pilot',
-    'A.A.R.O. Database',
-    'Naval FLIR Capture'
-  ];
-  const classifications = ['civilian', 'declassified'];
-  const colors = ['#00e5ff', '#ffb000', '#00ff41', '#ff003c']; // Corresponds to orb, saucer, tic-tac, triangle
-  const randomSightings = [];
-
-  for (let i = 0; i < count; i++) {
-    // Random lat/lng, weighted slightly away from extreme poles for better visibility
-    const lat = (Math.random() - 0.5) * 160;
-    const lng = (Math.random() - 0.5) * 360;
-
-    const typeIdx = Math.floor(Math.random() * types.length);
-    const type = types[typeIdx];
-
-    // Random date within the last 50 years
-    const randomTime = Date.now() - (Math.random() * 50 * 365 * 24 * 60 * 60 * 1000);
-    const dateObj = new Date(randomTime);
-    const date = dateObj.toISOString().replace('T', ' ').substring(0, 19) + 'Z';
-
-    const isWater = Math.random() > 0.7; // Fake heuristic for ocean vs land
-    const locationName = `GRID-${Math.floor(Math.abs(lat))}-${Math.floor(Math.abs(lng))}`;
-
-    // Generate random telemetry
-    const speed = (Math.random() * 20).toFixed(1);
-    const alt = Math.floor(Math.random() * 100) * 1000;
-    const rcs = (Math.random() > 0.5) ? (Math.random() * 5).toFixed(2) : 'FLUCTUATING';
-    const threats = ['LOW', 'ELEVATED', 'CRITICAL', 'UNKNOWN'];
-    const emis = ['NONE', 'MODERATE', 'SEVERE', 'COMMUNICATION BLACKOUT', 'GPS DENIAL'];
-
-    randomSightings.push({
-      id: `UAP-${(i + 9).toString().padStart(3, '0')}`,
-      lat: parseFloat(lat.toFixed(4)),
-      lng: parseFloat(lng.toFixed(4)),
-      city: locationName,
-      date: date,
-      type: type,
-      source: sources[Math.floor(Math.random() * sources.length)],
-      desc: `Anomalous ${type} contact detected. Transponder inactive. Speed and trajectory inconsistent with known aircraft. Radar cross-section intermittent. Visual confirmation pending.`,
-      classification: classifications[Math.floor(Math.random() * classifications.length)],
-      color: colors[typeIdx],
-      telemetry: {
-        speed_mach: speed > 15 ? 'UNKNOWN' : speed,
-        alt_ft: alt > 80000 ? 'ORBITAL' : alt.toLocaleString(),
-        rcs_sqm: rcs,
-        threat: threats[Math.floor(Math.random() * threats.length)],
-        emi: emis[Math.floor(Math.random() * emis.length)]
-      }
-    });
-  }
-
-  // Sort by date descending
-  return randomSightings.sort((a, b) => new Date(b.date) - new Date(a.date));
-};
-
-// Combine curated and 200 procedural sightings
-const SIGHTINGS_DATA = [...CURATED_SIGHTINGS, ...generateRandomSightings(200)];
-
-// Generate some random flight paths to simulate movement
-const generateArcs = () => {
-  const arcs = [];
-  // Connect some consecutive procedural sightings to pretend they are the same tracked object
-  for (let i = CURATED_SIGHTINGS.length; i < SIGHTINGS_DATA.length - 1; i += 5) {
-    arcs.push({
-      startLat: SIGHTINGS_DATA[i].lat,
-      startLng: SIGHTINGS_DATA[i].lng,
-      endLat: SIGHTINGS_DATA[i + 1].lat,
-      endLng: SIGHTINGS_DATA[i + 1].lng,
-      color: ['rgba(0, 255, 65, 0.1)', 'rgba(0, 255, 65, 0.8)']
-    });
-  }
-  return arcs;
-};
-
-const ARCS_DATA = generateArcs();
+// No simulated flight arcs
+const ARCS_DATA = [];
 
 // Initialize Globe.gl
 const globeContainer = document.getElementById('globeViz');
@@ -203,7 +117,7 @@ const world = Globe()(globeContainer)
   .labelsData(SIGHTINGS_DATA)
   .labelLat(d => d.lat)
   .labelLng(d => d.lng)
-  .labelText(d => d.id.startsWith('UAP-00') ? d.city : '')
+  .labelText(d => d.city)
   .labelSize(1)
   .labelDotRadius(0.3)
   .labelColor(d => d.color)
@@ -223,7 +137,7 @@ const world = Globe()(globeContainer)
   .arcStroke(0.2);
 
 // Add rings around points to simulate radar pings (only for curated data to reduce clutter)
-world.ringsData(CURATED_SIGHTINGS)
+world.ringsData(SIGHTINGS_DATA)
   .ringColor(d => d.color)
   .ringMaxRadius(3)
   .ringPropagationSpeed(1)
