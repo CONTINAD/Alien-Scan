@@ -170,6 +170,7 @@ const SIGHTINGS_DATA = [
     desc: 'A massive black triangular craft hovered silently over a residential area, blocking out the stars. Witnesses reported a low hum and static electricity.',
     classification: 'civilian', color: '#ff003c', telemetry: { speed_mach: 'HOVER', alt_ft: '500', rcs_sqm: 'MASSIVE', threat: 'LOW', emi: 'STATIC FIELD' }
   },
+  {
     id: 'UAP-035', lat: -15.793, lng: -47.882, city: 'Night of the UFOs, BRA', date: '1986-05-19T20:00:00Z', type: 'orb', source: 'Brazilian Air Force',
     desc: 'Over 20 UAPs jammed radar and outmaneuvered intercepting F-5 jets across several states. Official press conference declared them intelligently controlled.',
     classification: 'declassified', color: '#00e5ff', telemetry: { speed_mach: 'UP TO MACH 15', alt_ft: '30,000+', rcs_sqm: 'VARIABLE', threat: 'ELEVATED', emi: 'RADAR JAMMING' }
@@ -357,8 +358,8 @@ const ARCS_DATA = [];
 // Initialize Globe.gl
 const globeContainer = document.getElementById('globeViz');
 const world = Globe()(globeContainer)
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+  .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+  .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
   .backgroundColor('rgba(0,0,0,0)')
   .showAtmosphere(true)
   .atmosphereColor('lightgreen')
@@ -631,13 +632,13 @@ setTimeout(addTerminalLine, 500);
 
 // Decryption effect for title
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
-let interval = null;
+let decryptionInterval = null;
 
 function startDecryption() {
   let iteration = 0;
-  clearInterval(interval);
+  clearInterval(decryptionInterval);
 
-  interval = setInterval(() => {
+  decryptionInterval = setInterval(() => {
     bootTitle.innerText = bootTitle.innerText
       .split("")
       .map((letter, index) => {
@@ -649,7 +650,7 @@ function startDecryption() {
       .join("");
 
     if (iteration >= bootTitle.dataset.value.length) {
-      clearInterval(interval);
+      clearInterval(decryptionInterval);
     }
 
     iteration += 1 / 3;
